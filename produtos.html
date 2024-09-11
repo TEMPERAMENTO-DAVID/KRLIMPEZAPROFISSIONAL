@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Produtos</title>
+    <link rel="stylesheet" href="styles-produtos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/cropped-kr-limpeza-logo-alta-1-1-150x150.png" alt="Logo da Empresa">
+            <a href="index.html">KR LIMPEZA PROFISSIONAL</a>
+        </div>
+        <nav>
+            <a href="orcamento.html">SOLICITAR ORÇAMENTO</a>
+            <a href="#servicos">NOSSOS SERVIÇOS</a>
+            <a href="produtos.html">NOSSOS PRODUTOS</a>
+            <a href="contato.html">ENTRE EM CONTATO</a>
+
+            <select id="mobileNav" onchange="location = this.value;">
+                <option value="" disabled selected>Navegar</option>
+                <option value="orcamento.html">SOLICITAR ORÇAMENTO</option>
+                <option value="#servicos">NOSSOS SERVIÇOS</option>
+                <option value="produtos.html">NOSSOS PRODUTOS</option>
+                <option value="contato.html">ENTRE EM CONTATO</option>
+            </select>
+        </nav>
+    </header>
+    
+    <section class="produtos">
+        <div class="produto">
+            <img src="https://via.placeholder.com/300x200" alt="Produto 1">
+            <h2>Produto 1</h2>
+            <p class="preco-antigo">De: R$199,90</p>
+            <p class="preco-novo">Por: R$149,90</p>
+            <p class="oferta">Oferta válida até: 10/09/2024</p>
+            <button>Comprar Agora</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/300x200" alt="Produto 2">
+            <h2>Produto 2</h2>
+            <p class="preco-antigo">De: R$299,90</p>
+            <p class="preco-novo">Por: R$249,90</p>
+            <p class="oferta">Oferta válida até: 15/09/2024</p>
+            <button>Comprar Agora</button>
+        </div>
+
+        <div class="produto">
+            <img src="https://via.placeholder.com/300x200" alt="Produto 3">
+            <h2>Produto 3</h2>
+            <p class="preco-antigo">De: R$99,90</p>
+            <p class="preco-novo">Por: R$69,90</p>
+            <p class="oferta">Oferta válida até: 12/09/2024</p>
+            <button>Comprar Agora</button>
+        </div>
+    </section>
+    
+    <footer>
+        <img src="img/cropped-kr-limpeza-logo-alta-1-1-150x150.png" alt="Logo da Empresa">
+        <div class="footer-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <!-- Adicione mais links conforme necessário -->
+        </div>
+        <div class="footer-info">
+            <p>Endereço: Rua Exemplo, 123, Cidade, Estado</p>
+            <p>Contato: (11) 1234-5678</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a2a7ae;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+header {
+    width: 100%;
+    background: #f8f9fa;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header img {
+    max-height: 75px;
+    margin-left: 20px;
+    filter: drop-shadow(-5px 5px 5px black);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.logo a:hover {
+    filter: drop-shadow(-5px 12px 3px  black);
+}
+
+nav {
+    margin-right: 15px;
+}
+
+select {
+    display: none;
+}
+
+nav a {
+    background-color: rgb(1, 25, 83);
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: rgb(1, 25, 83);
+}
+
+.contact {
+    
+    height: 80vh;
+    max-width: 700px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 200px;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+input, textarea {
+    width: 100vh;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    display: block;
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+footer {
+    height: 30vh;
+    background-color: rgb(1, 25, 83);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 15px;
+    margin: 0 10px;
+}
+
+footer img {
+    width: 135px;
+    filter: drop-shadow(-10px 14px 10px black);
+}
+
+/* Responsividade */
+@media (max-width: 1175px) {
+    header {
+        height: 150px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 838px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        margin: 10px 0;
+        display: flex;
+        font-size: 12px;
+    }
+
+}
+
+@media  (max-width: 655px)  {
+    nav a {
+        display: none;
+    }  
+
+
+    nav select {
+        background-color: rgb(1, 25, 83);
+        color: #fff;
+        border-radius: 15px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    header {
+        height: 150px;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    section {
+        margin-top: 190px;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 30px;
+        height: 800px;
+        position: relative;
+        bottom: 0;
+    }
+
+    footer img {
+        width: 125px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}
