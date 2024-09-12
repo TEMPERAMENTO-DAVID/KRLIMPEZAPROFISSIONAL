@@ -32,6 +32,8 @@ a {
   .header {
     background: #ddd;
     padding-inline: 16px;
+    position: fixed;
+    width: 100%;
   }
   
   .nav {
@@ -67,7 +69,7 @@ a {
   }
   
   .banner {
-    height: calc(100vh - 70px);
+    height: calc(100vh + 50px);
     background: center / cover no-repeat url("img/banner.png");
     background-attachment: fixed;
   }
@@ -309,10 +311,10 @@ footer img {
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: #a5c;
+      background: #1A2D61;
       clip-path: circle(100px at 90% -15%);
       transition: 1s ease-out;
-  
+    
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
@@ -322,6 +324,7 @@ footer img {
     }
   
     .nav-list a {
+        color: #ddd;
       font-size: 24px;
       opacity: 0;
     }
