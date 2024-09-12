@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Captura os valores do formulário
             const nome = document.getElementById('nome').value;
             const email = document.getElementById('email').value;
-            const telefone = document.getElementById('celular').value; // Corrigido para 'celular'
+            const telefone = document.getElementById('telefone').value;
             const mensagem = document.getElementById('mensagem').value;
 
             // Formata a mensagem para o WhatsApp
