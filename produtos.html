@@ -4,29 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aluguel de Máquinas</title>
+    <link rel="icon" href="img/iconepage.png" type="image/png">
     <link rel="stylesheet" href="styles-produtos.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo da Empresa">
-            <a href="index.html">KR LIMPEZA PROFISSIONAL</a>
-        </div>
-        <nav>
-            <a href="orcamento.html">SOLICITE ORÇAMENTO</a>
-            <a href="https://krprodutosdelimpeza.hipershops.com.br/" target="_blank">NOSSOS PRODUTOS</a>
-            <a href="produtos.html">ALUGUEL DE MÁQUINAS</a>
-            <a href="#">CONTATO</a>
-
-            <select id="mobileNav" onchange="handleSelectChange(event)">
-                <option value="" disabled selected>Navegar</option>
-                <option value="orcamento.html">SOLICITE ORÇAMENTO</option>
-                <option value="https://krprodutosdelimpeza.hipershops.com.br/">NOSSOS PRODUTOS</option>
-                <option value="produtos.html">ALUGUEL DE MÁQUINAS</option>
-                <option value="contato.html">CONTATO</option>
-            </select>
+    <header class="header">
+        <nav class="nav">
+          <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo da Empresa"> KR LIMPEZA PROFISSIONAL</a>
+          <button class="hamburger"></button>
+          <ul class="nav-list">
+            <li><a href="orcamento.html">Orçamento</a></li>
+            <li><a href="produtos.html">Aluguel de máquinas</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
     
     <section class="produtos">
         <div class="produto">
