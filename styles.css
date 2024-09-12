@@ -122,18 +122,18 @@ nav a:hover {
 }
 
 .service-item {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     color: #1A2D61;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
 }
 
 .service-item:hover {
-    border-radius: 15px;
-    box-shadow: 3px 2px 13px black;
-    background-color: #1a2d61;
-    color: #fff;
-}
+    transform: scale(1.15);
+    }
 
 .service-item img {
     width: 100%;
