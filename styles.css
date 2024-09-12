@@ -31,7 +31,7 @@ a {
   
   .header {
     background: #ddd;
-    padding-inline: 16px;
+    padding: 16px;
     position: fixed;
     width: 100%;
   }
@@ -44,16 +44,23 @@ a {
     justify-content: space-between;
     align-items: center;
   }
+  
   .nav a {
     display: flex;
     align-items: center;
     gap: 30px;
     font-size: 1.2em;
+    color: #1A2D61;
+  }
+
+  .nav a:hover {
+    filter: drop-shadow(-10px 5px 5px black);
   }
   
   .logo img{
-    width: 4rem;
+    width: 4.5rem;
   }
+
   
   .nav-list {
     display: flex;
@@ -312,7 +319,7 @@ footer img {
       width: 100vw;
       height: 100vh;
       background: #1A2D61;
-      clip-path: circle(100px at 90% -15%);
+      clip-path: circle(90px at 120% -15%);
       transition: 1s ease-out;
     
       flex-direction: column;
