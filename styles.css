@@ -23,10 +23,9 @@ p {
     font-size: .8em;
 }
 
-
 a {
     text-decoration: none;
-    font-weight: 900;
+    font-weight: bold;
   }
   
   .header {
