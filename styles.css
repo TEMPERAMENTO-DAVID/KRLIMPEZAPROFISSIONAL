@@ -35,6 +35,7 @@ a {
     width: 100%;
     top: 0;
     z-index: 1;
+    box-shadow: 0 4px 2px -2px gray;
   }
   
   .nav {
@@ -49,7 +50,7 @@ a {
   .nav a {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     font-size: 1.2em;
     color: #1A2D61;
   }
@@ -71,7 +72,7 @@ a {
   
   .nav-list a {
     font-size: 18px;
-    color: #fff;
+    color: #ffffff;
     padding-block: 16px;
     color: #1A2D61;
   }
@@ -86,7 +87,7 @@ a {
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid #fff;
+    border-top: 3px solid #1A2D61;
     cursor: pointer;
   }
   
@@ -96,7 +97,7 @@ a {
     display: block;
     width: 30px;
     height: 3px;
-    background: #fff;
+    background: #1A2D61;
     margin-top: 5px;
     position: relative;
     transition: 0.3s;
@@ -233,7 +234,7 @@ footer img {
 /* Responsividade */
 @media (max-width: 1040px) {
     header {
-        height: 150px;
+        height: 100px;
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
@@ -244,11 +245,11 @@ footer img {
     }
 
     .box-services {
-        height: 200vh;
+        height: 100vh;
     }
 
     .services{
-        height: 100rem;
+        height: 65rem;
         justify-content: flex-start;
     }
     .banner, section {
@@ -269,9 +270,7 @@ footer img {
     }
 
     nav {
-        margin: 10px 0;
         display: flex;
-        font-size: 12px;
     }
 
     .banner {
@@ -279,7 +278,7 @@ footer img {
     }
 
     .services {
-        height: 120rem;
+        height: 110rem;
         justify-content: flex-start;
         gap: 30px;
     }
@@ -307,11 +306,13 @@ footer img {
  
 
 }
-@media (max-width: 750px) {
+@media (max-width: 850px) {
     .hamburger {
       display: block;
       z-index: 1;
     }
+
+    
   
     .nav-list {
       position: fixed;
@@ -375,7 +376,9 @@ footer img {
       transform: rotate(-135deg);
       top: -7px;
     }
-  }
+
+
+  
 
 @media (max-width: 655px) {
     nav a {
@@ -393,14 +396,14 @@ footer img {
     }
 
     header {
-        height: 150px;
+        height: 100px;
         align-items: center;
         justify-content: center;
         z-index: 1;
         position: fixed;
         width: 100%;
         background-color: #f8f9fa;
-        box-shadow: 0 4px 2px -2px gray;
+        
     }
 
     .banner, section {
@@ -417,7 +420,7 @@ footer img {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 280vh;
+        height: 185vh;
     }
 
     .service-item {
@@ -426,9 +429,6 @@ footer img {
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        background-color: #1A2D61;
-        color: #ddd;
-        border-radius: 15px;
     }
 
     .service-item img {
@@ -510,7 +510,7 @@ footer img {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        height: 450vh;
+        height: 185rem;
     }
 
     .service-item {
@@ -563,20 +563,9 @@ footer img {
 }
 
 @media (max-width: 450px) {
-    nav a {
-        display: none;
+    .logo {
+        gap: 0px;
     }
-
-    nav select {
-        background-color: #1A2D61;
-        color: #fff;
-        border-radius: 10px;
-        display: block;
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-    }
-
     header {
         height: 150px;
         align-items: center;
