@@ -58,7 +58,9 @@ a {
   .nav a:hover {
     filter: drop-shadow(-10px 5px 5px black);
   }
-  
+  .logo {
+    width: 30vw;
+  }
   .logo img{
     width: 4.5rem;
   }
@@ -87,7 +89,7 @@ a {
     display: none;
     border: none;
     background: none;
-    border-top: 3px solid #1A2D61;
+    border-top: 3px solid #9e9e00;
     cursor: pointer;
   }
   
@@ -97,10 +99,10 @@ a {
     display: block;
     width: 30px;
     height: 3px;
-    background: #1A2D61;
+    background: #9e9e00;
     margin-top: 5px;
     position: relative;
-    transition: 0.3s;
+    transition: 1.5s;
   }
 /* Services Section */
 .services {
@@ -312,8 +314,6 @@ footer img {
       z-index: 1;
     }
 
-    
-  
     .nav-list {
       position: fixed;
       top: 0;
@@ -363,7 +363,7 @@ footer img {
   
     .nav.active .hamburger {
       position: fixed;
-      top: 26px;
+      top: 46px;
       right: 16px;
       border-top-color: transparent;
     }
@@ -376,6 +376,7 @@ footer img {
       transform: rotate(-135deg);
       top: -7px;
     }
+}
 
 
   
@@ -385,15 +386,6 @@ footer img {
         display: none;
     }
 
-    nav select {
-        background-color: #1A2D61;
-        color: #fff;
-        border-radius: 10px;
-        display: block;
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-    }
 
     header {
         height: 100px;
