@@ -92,3 +92,14 @@ const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav");
 
 hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    var returnButton = document.querySelector(".return");
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 170) {
+        returnButton.classList.add("show"); // Mostra o botão
+    } else {
+        returnButton.classList.remove("show"); // Esconde o botão
+    }
+}

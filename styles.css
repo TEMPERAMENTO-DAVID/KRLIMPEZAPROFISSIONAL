@@ -78,7 +78,25 @@ a {
     padding-block: 16px;
     color: #1A2D61;
   }
-  
+
+  .return {
+    width: 45px;
+    height: 45px;
+    background-image: url('img/zap.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s ease-in-out; /* Suaviza a transição da opacidade */
+    pointer-events: none; /* Evita clique enquanto invisível */
+    filter: drop-shadow(0px 0px 4px black );
+}
+
+
+
   .banner {
     height: calc(100vh + 50px);
     background: center / cover no-repeat url("img/banner.png");
@@ -309,9 +327,19 @@ footer img {
 
 }
 @media (max-width: 850px) {
+
+    .return.show {
+        opacity: 1; /* Quando a classe 'show' é adicionada, o botão aparece */
+        pointer-events: auto; /* Ativa cliques quando o botão estiver visível */
+    }
+
     .hamburger {
       display: block;
       z-index: 1;
+    }
+    .header {
+        position: static;
+        height: 6rem;
     }
 
     .nav-list {
@@ -386,17 +414,6 @@ footer img {
         display: none;
     }
 
-
-    header {
-        height: 100px;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        position: fixed;
-        width: 100%;
-        background-color: #f8f9fa;
-        
-    }
 
     .banner, section {
         background-image: url('img/banner.png');
@@ -555,21 +572,7 @@ footer img {
 }
 
 @media (max-width: 450px) {
-    .logo {
-        gap: 0px;
-    }
-    header {
-        height: 150px;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        position: fixed;
-        width: 100%;
-        background-color: #f8f9fa;
-        box-shadow: 0 4px 2px -2px gray;
-        flex-direction: column;
-    }
-
+  
     .banner, section {
         background-image: url('img/banner.png');
         background-size: 200%;

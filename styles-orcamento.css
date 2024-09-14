@@ -220,6 +220,11 @@ footer img {
 }
 
 @media (max-width: 850px) {
+    .header {
+        position: static;
+        height: 6rem;
+    }
+
     .hamburger {
         display: block;
         z-index: 1;
