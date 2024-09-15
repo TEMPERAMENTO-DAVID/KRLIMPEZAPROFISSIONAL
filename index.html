@@ -8,25 +8,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="img/cropped-kr-limpeza-logo-alta-1-1-150x150.png" alt="Logo da Empresa">
-            <a href="index.html">KR LIMPEZA PROFISSIONAL</a>
-        </div>
-        <nav>
-            <a href="orcamento.html">SOLICITE ORÇAMENTO</a>
-            <a href="https://krprodutosdelimpeza.hipershops.com.br/" target="_blank">NOSSOS PRODUTOS</a>
-            <a href="produtos.html">ALUGUEL DE MÁQUINAS</a>
-            <a href="contato.html">CONTATO</a>
-
-            <select id="mobileNav" onchange="handleSelectChange(event)">
-                <option value="" disabled selected>Navegar</option>
-                <option value="orcamento.html">SOLICITE ORÇAMENTO</option>
-                <option value="https://krprodutosdelimpeza.hipershops.com.br/">NOSSOS PRODUTOS</option>
-                <option value="produtos.html">ALUGUEL DE MÁQUINAS</option>
-                <option value="contato.html">CONTATO</option>
-            </select>
-        </nav>
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo da Empresa"> KR LIMPEZA PROFISSIONAL</a>
+        <button class="hamburger"></button>
+        <ul class="nav-list">
+          <li><a href="orcamento.html">Orçamento</a></li>
+          <li><a href="produtos.html">Aluguel de máquinas</a></li>
+          <li><a href="https://krprodutosdelimpeza.hipershops.com.br/" target="_blank">Loja Virtual</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!--Botão WhatssApp-->
@@ -39,9 +30,9 @@
 
     
     
-    <!-- SEÇÃO DE PISOS -->
+    <!-- SEÇÃO DE PEDRAS -->
     <div id="servicos" class="services">
-        <h1>PISOS EM GERAL</h1>
+        <h1>LIMPEZA EM PEDRAS</h1>
         <div class="box-services">   
             <div class="service-item">
                 <a href="#img1">
@@ -113,7 +104,7 @@
     <!-- SEÇÃO RESTAURAÇÕES -->
 
     <div id="servicos" class="services">
-        <h1>RESTAURAÇÕES E IMPERMEABILIZAÇÃO</h1>
+        <h1>RESTAURAÇÕES E IPERMEABILIZAÇÃO</h1>
         <div class="box-services">   
             <div class="service-item">
                 <a href="#img5">
@@ -162,7 +153,7 @@
             
             <div class="service-item">
                 <a href="#img8">
-                    <img src="img\recuperaçao de movel antigo.png" alt="Serviço" style="width: 100%;">
+                    <img src="img\img08.png" alt="Serviço" style="width: 100%;">
                 </a>
                 <div class="box-txt">
                     <h2>Restauração de móveis</h2>
@@ -172,7 +163,78 @@
             
             <div id="img8" class="lightbox">
                 <a href="#" class="lightbox-close"></a> <!-- Link para fechar fora da imagem -->
-                <img src="img\recuperaçao de movel antigo.png" alt="Serviço ampliado" class="ampliada">
+                <img src="img\img08.png" alt="Serviço ampliado" class="ampliada">
+            </div>
+        </div>            
+    </div>
+
+    <!--banner-->
+
+    <div class="banner"></div>
+
+    <!--PISCINAS EM GERAL-->
+
+    <div id="servicos" class="services">
+        <h1>OUTROS SERVIÇOS</h1>
+        <div class="box-services">   
+            <div class="service-item">
+                <a href="#img09">
+                    <img src="img/img09.jpg" alt="Serviço" style="width: 100%;">
+                </a>
+                <div class="box-txt">    
+                    <h2>Restauração e aplicação de verniz</h2>                
+                    <p>Serviço que envolve a recuperação da madeira desgastada do deque, seguido da aplicação de verniz protetor, trazendo de volta sua beleza natural e garantindo maior proteção contra os efeitos do tempo.</p>
+                </div>
+            </div>
+            
+            <div id="img09" class="lightbox">
+                <a href="#" class="lightbox-close"></a> <!-- Link para fechar fora da imagem -->
+                <img src="img/img09.jpg" alt="Serviço ampliado" class="ampliada">
+            </div>
+            
+            <div class="service-item">
+                <a href="#img10">
+                    <img src="img/img10.jpg" alt="Serviço" style="width: 100%;">
+                </a>
+                <div class="box-txt">
+                    <h2>Limpeza e clareamento com aplicação do hidrofugante</h2>
+                    <p>Serviço que limpa profundamente e clareia a superfície, seguido da aplicação de hidrofugante, um produto que protege contra a infiltração de água, prolongando a durabilidade e mantendo a aparência renovada por mais tempo.</p>
+                </div>        
+            </div>
+            
+            <div id="img10" class="lightbox">
+                <a href="#" class="lightbox-close"></a> <!-- Link para fechar fora da imagem -->
+                <img src="img/img10.jpg" alt="Serviço ampliado" class="ampliada">
+            </div>
+            
+            <div class="service-item">
+                <a href="#img11">
+                    <img src="img/img11.jpg" alt="Serviço" style="width: 100%;">
+                </a>
+                <div class="box-txt">
+                    <h2>Restauração e aplicação de verniz em palha e madeira roliça</h2>
+                    <p>Serviço especializado na recuperação da palha e madeira roliça desgastadas, seguido de um acabamento com verniz, que realça a beleza natural dos materiais e oferece proteção contra o desgaste e a ação do tempo.</p>
+                </div>    
+            </div>
+            
+            <div id="img11" class="lightbox">
+                <a href="#" class="lightbox-close"></a> <!-- Link para fechar fora da imagem -->
+                <img src="img/img11.jpg" alt="Serviço ampliado" class="ampliada">
+            </div>
+            
+            <div class="service-item">
+                <a href="#img12">
+                    <img src="img/img12.jpg" alt="Serviço" style="width: 100%;">
+                </a>
+                <div class="box-txt">
+                    <h2>Restauração de móveis</h2>
+                    <p>Processo cuidadoso de recuperação de móveis antigos ou danificados, renovando sua aparência e funcionalidade, preservando as características originais e aumentando sua durabilidade.</p>
+                </div>    
+            </div>
+            
+            <div id="img12" class="lightbox">
+                <a href="#" class="lightbox-close"></a> <!-- Link para fechar fora da imagem -->
+                <img src="img/img12.jpg" alt="Serviço ampliado" class="ampliada">
             </div>
         </div>            
     </div>
