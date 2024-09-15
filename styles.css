@@ -12,6 +12,7 @@ h1 {
     color: #1A2D61;
     font-weight: bold;
     font-size: 2em;
+    text-align: center;
 }
 
 h2 {
@@ -343,21 +344,20 @@ footer img {
     }
 
     .nav-list {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #1A2D61;
-      clip-path: circle(90px at 120% -15%);
-      transition: 1s ease-out;
-    
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      gap: 0;
-  
-      pointer-events: none;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #1A2D61;
+        clip-path: circle(90px at 120% -15%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+        z-index: 1;
     }
   
     .nav-list a {
