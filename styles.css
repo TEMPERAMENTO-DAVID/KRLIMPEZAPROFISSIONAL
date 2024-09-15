@@ -527,10 +527,7 @@ footer img {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 0 auto;
-        background-color: #1A2D61;
-        color: #ddd;
-        border-radius: 15px;
+       
     }
 
     .service-item img {
@@ -596,9 +593,6 @@ footer img {
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        background-color: #1A2D61;
-        color: #ddd;
-        border-radius: 15px;
     }
 
     .service-item img {
