@@ -30,13 +30,14 @@ a {
   
   .header {
     background: #ddd;
-    padding: 16px;
+    padding: 1px 10px;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1;
+    z-index: 4;
     box-shadow: 0 4px 2px -2px gray;
   }
+  
   
   .nav {
     max-width: 1280px;
@@ -171,30 +172,34 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: #fff;
-    position: absolute;
-    bottom: -10;
+    font-weight: bold;
+    color: #9e9e00;
+    text-align: initial;
 }
 
 footer a {
-    color: #fff;
+    color: #1A2D61;
+    background-color: #ddd;
     text-decoration: none;
-    padding: 10px 20px;
-    border: 1px solid;
+    padding: .2rem .8rem ;
+    border: 1px solid none;
     border-radius: 15px;
     margin: 0 10px;
-    
+    font-size: 1.3rem;
 }
 
 footer img {
     width: 135px;
     filter: drop-shadow(-10px 14px 10px black);
 }
+.footer-info p {
+    font-size: 20px;
+    padding:  5px 0;
+}
 
 /* Responsividade */
 @media (max-width: 1040px) {
     header {
-        height: 100px;
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
@@ -217,13 +222,18 @@ footer img {
         flex-direction: column;
         gap: 20px;
     }
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 850px) {
     .header {
         position: static;
-        height: 6rem;
     }
+
 
     .hamburger {
         display: block;
@@ -323,7 +333,56 @@ footer img {
         display: flex;
         flex-direction: column;
     }
-}    
+}   
+
+@media (max-width: 550px) {
+    nav a {
+        display: none;
+    }
+
+    nav select {
+        background-color: #1A2D61;
+        color: #fff;
+        border-radius: 10px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    header {
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+        background-color: #f8f9fa;
+        box-shadow: 0 4px 2px -2px gray;
+        flex-direction: column;
+    }
+
+    footer {
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    footer img {
+        width: 125px;
+    }
+
+    footer a {
+        margin: 0;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
 
 
 @media (max-width: 450px) {

@@ -31,7 +31,7 @@ a {
   
   .header {
     background: #ddd;
-    padding: 1px 0;
+    padding: 1px 10px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -267,7 +267,6 @@ footer img {
 /* Responsividade */
 @media (max-width: 1040px) {
     header {
-        height: 100px;
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
@@ -354,7 +353,6 @@ footer img {
     }
     .header {
         position: static;
-        height: 6rem;
     }
 
     .nav-list {
@@ -508,7 +506,6 @@ footer img {
     }
 
     header {
-        height: 150px;
         align-items: center;
         justify-content: center;
         z-index: 1;
