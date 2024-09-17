@@ -388,6 +388,11 @@ footer img {
         display: flex;
         flex-direction: column;
     }
+
+    .footer-info p {
+        text-align: center;
+        font-size: 1.18rem;
+    }
     
 }
 
@@ -426,6 +431,11 @@ footer img {
         display: flex;
         flex-direction: column;
     }
+
+    .footer-info p {
+        text-align: center;
+        font-size: 1.18rem;
+    }
     
-}
+    }
 }
