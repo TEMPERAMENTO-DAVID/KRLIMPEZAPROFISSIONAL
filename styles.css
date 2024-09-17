@@ -583,7 +583,7 @@ footer img {
         background-attachment: fixed;
         height: 100vh;
     }
-    
+
     .services {
         display: flex;
         flex-direction: column;
@@ -634,5 +634,3 @@ footer img {
         display: flex;
         flex-direction: column;
     }
-    
-}
