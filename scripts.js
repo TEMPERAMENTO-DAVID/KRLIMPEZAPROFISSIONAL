@@ -9,10 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const nome = document.getElementById('nome').value;
             const email = document.getElementById('email').value;
             const telefone = document.getElementById('telefone').value;
+            const cidade = document.getElementById('cidade').value;
             const mensagem = document.getElementById('mensagem').value;
 
             // Formata a mensagem para o WhatsApp
-            const textoMensagem = `Olá, meu nome é *${nome}* ,\n\n *Vim pelo Site!* \n\n Meu e-mail é *${email}*,\n\nMeu telefone é *${telefone}*.\n\nPreciso de um orçamento para o seguinte serviço:\n*${mensagem}*`;
+            const textoMensagem = `Olá, meu nome é *${nome}* ,\n\n*Vim pelo Site!* \n\nMeu e-mail é *${email}*,\n\nMeu telefone é *${telefone}*,\n\nEu moro em *${cidade}*.\n\nPreciso de um orçamento para o seguinte serviço:\n*${mensagem}*`;
 
             // Codifica a mensagem para uso na URL
             const textoCodificado = encodeURIComponent(textoMensagem);
@@ -86,20 +87,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
 
-const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector(".nav");
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
 
-hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+    hamburger.addEventListener("click", () => nav.classList.toggle("active"));
 
-window.onscroll = function() {scrollFunction()};
+    window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-    var returnButton = document.querySelector(".return");
-    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 170) {
-        returnButton.classList.add("show"); // Mostra o botão
-    } else {
-        returnButton.classList.remove("show"); // Esconde o botão
+    function scrollFunction() {
+        var returnButton = document.querySelector(".return");
+        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 170) {
+            returnButton.classList.add("show"); // Mostra o botão
+        } else {
+            returnButton.classList.remove("show"); // Esconde o botão
+        }
     }
-}
+});

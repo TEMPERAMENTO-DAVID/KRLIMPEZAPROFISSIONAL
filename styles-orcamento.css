@@ -107,7 +107,6 @@ a {
   }
 
 .container {
-    height: 80vh;
     max-width: 700px;
     margin: 20vh auto;
     background: #fff;
@@ -139,10 +138,13 @@ h1 {
 label {
     display: block;
     margin: 10px 0 5px;
+    color: #1A2D61;
 }
 
-input, textarea {
+
+input, textarea, select {
     width: 100%;
+    max-width: 640px;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
