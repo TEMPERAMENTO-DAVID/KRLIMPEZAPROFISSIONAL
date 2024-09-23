@@ -319,7 +319,7 @@ footer img {
     
 
     footer {
-        height: 80vh;
+        height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -369,7 +369,6 @@ footer img {
 
 
     footer {
-        height: 80vh;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -411,7 +410,6 @@ footer img {
         flex-direction: column;
     }
     footer {
-        height: 80vh;
         width: 100%;
         display: flex;
         flex-direction: column;
