@@ -12,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const mensagem = document.getElementById('mensagem').value;
 
             // Formata a mensagem para o WhatsApp
-            const textoMensagem = `Olá, meu nome é *${nome}*,\n\nMeu e-mail é *${email}*,\n\nMeu telefone é *${telefone}*.\n\nPreciso de um orçamento para o seguinte serviço:\n*${mensagem}*`;
+            const textoMensagem = `Olá, meu nome é *${nome}* ,\n\n *Vim pelo Site!* \n\n Meu e-mail é *${email}*,\n\nMeu telefone é *${telefone}*.\n\nPreciso de um orçamento para o seguinte serviço:\n*${mensagem}*`;
 
             // Codifica a mensagem para uso na URL
             const textoCodificado = encodeURIComponent(textoMensagem);
 
             // Número de WhatsApp de destino (inclua o código do país)
-            const numeroWhatsApp = '5511933364357';
+            const numeroWhatsApp = '5511978745070';
 
             // Cria o link de WhatsApp
             const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`;
