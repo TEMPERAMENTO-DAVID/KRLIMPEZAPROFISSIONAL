@@ -105,6 +105,7 @@ a {
     height: calc(100vh + 50px);
     background: center / cover no-repeat url("img/banner.png");
     background-attachment: fixed;
+    background-color: #1A2D61;
   }
   
   .hamburger {
@@ -306,7 +307,7 @@ footer img {
     }
 
     .banner {
-        height: 100vh;
+        background-size: 70%;
     }
 
     .services {
@@ -416,6 +417,10 @@ footer img {
       transform: rotate(-135deg);
       top: -7px;
     }
+
+    .banner {
+        background-size: 70%;
+    }
 }
 
 
@@ -427,13 +432,12 @@ footer img {
     }
 
 
-    .banner, section {
-        background-image: url('img/banner.png');
-        background-size: 80%;
-        background-repeat: no-repeat;
+    .banner {
+        height: calc(100vh + 50px);
+        background: center / cover no-repeat url("img/banner.png");
         background-attachment: fixed;
-        height: 100vh;
-    }
+        background-color: #1A2D61;
+      }
 
 
     .services {
