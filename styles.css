@@ -101,12 +101,43 @@ a {
 
 
 
-  .banner {
-    height: calc(100vh + 50px);
-    background: center / cover no-repeat url("img/banner.png");
-    background-attachment: fixed;
-    background-color: #1A2D61;
-  }
+    .container-banner {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr; /* 1 parte para as colunas laterais, 3 partes para o centro */
+        height: calc(100vh + 50px); /* Altura total do container */
+        
+    }
+    
+    .left, .right {
+        background-color: #1A2D61; /* Cor de fundo para as colunas laterais */
+        color: #fff;
+        box-shadow: 0 7px 2px -2px gray;
+    }
+    .info {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 200px;
+        padding: 20px;
+    }
+    
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Centraliza verticalmente */
+    }
+    
+    .banner {
+        width: 100%; /* Largura total do banner */
+        height: 100%; /* Altura total do banner */
+        background: center / cover no-repeat url("img/banner.png");
+        background-attachment: fixed;
+        background-color: #1A2D61;
+        box-shadow: 0 7px 2px -2px gray;
+    }
+
+ 
   
   .hamburger {
     display: none;
