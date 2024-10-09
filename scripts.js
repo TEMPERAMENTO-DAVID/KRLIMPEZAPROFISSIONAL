@@ -9,11 +9,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const nome = document.getElementById('nome').value;
             const email = document.getElementById('email').value;
             const telefone = document.getElementById('telefone').value;
-            const cidade = document.getElementById('cidade').value;
+            const cidadeSelect = document.getElementById('cidade');
+            const cidade = cidadeSelect.value === "Outra" 
+                           ? document.getElementById('outraCidade').value 
+                           : cidadeSelect.value; // Verifica se "outra" foi selecionado
             const mensagem = document.getElementById('mensagem').value;
 
             // Formata a mensagem para o WhatsApp
-            const textoMensagem = `Olá, meu nome é *${nome}* ,\n\n*Vim pelo Site!* \n\nMeu e-mail é *${email}*,\n\nMeu telefone é *${telefone}*,\n\nEu moro em *${cidade}*.\n\nPreciso de um orçamento para o seguinte serviço:\n\n\n${mensagem}`;
+            const textoMensagem = `Olá, meu nome é *${nome}* ,\n\n*Vim pelo Site!* \n\nMeu e-mail é *${email}*,\n\nMeu telefone é *${telefone}*,\n\nEu moro em *${cidade}*.\n\nPreciso agendar uma avaliação para o seguinte serviço:\n\n\n${mensagem}`;
 
             // Codifica a mensagem para uso na URL
             const textoCodificado = encodeURIComponent(textoMensagem);
@@ -29,78 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Lida com a mudança de seleção (se aplicável)
-    function handleSelectChange(event) {
-        const url = event.target.value;
-        if (url) {
-            if (url.startsWith('http')) {
-                // Se o link for externo, abre em nova aba
-                window.open(url, '_blank');
-            } else {
-                // Se for um link interno, navega na mesma aba
-                window.location.href = url;
-            }
-        }
-    }
+    // Função para mostrar o campo "outra cidade"
+    window.mostrarCampoOutro = function() {
+        var select = document.getElementById("cidade");
+        var input = document.getElementById("outraCidade");
 
-    // Função para mostrar o lightbox
-    function showLightbox(lightboxId) {
-        var lightbox = document.getElementById(lightboxId);
-        if (lightbox) {
-            lightbox.classList.add('visible'); // Adiciona classe para mostrar o lightbox
-        }
-    }
-
-    // Função para esconder o lightbox
-    function hideLightbox() {
-        var lightboxes = document.querySelectorAll('.lightbox.visible');
-        lightboxes.forEach(function(lightbox) {
-            lightbox.classList.remove('visible'); // Remove classe para esconder o lightbox
-        });
-    }
-
-    // Adiciona eventos de clique para mostrar o lightbox
-    var serviceLinks = document.querySelectorAll('.service-item a');
-    serviceLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault(); // Impede o comportamento padrão do link
-            var targetId = link.getAttribute('href').substring(1);
-            showLightbox(targetId);
-        });
-    });
-
-    // Adiciona eventos de clique para fechar o lightbox
-    var closeButtons = document.querySelectorAll('.lightbox-close');
-    closeButtons.forEach(function(closeBtn) {
-        closeBtn.addEventListener('click', function(e) {
-            e.preventDefault(); // Impede o comportamento padrão do link
-            hideLightbox();
-        });
-    });
-
-    // Fecha o lightbox ao clicar fora da imagem
-    var lightboxes = document.querySelectorAll('.lightbox');
-    lightboxes.forEach(function(lightbox) {
-        lightbox.addEventListener('click', function(e) {
-            if (e.target === lightbox) {
-                hideLightbox();
-            }
-        });
-    });
-
-    const hamburger = document.querySelector(".hamburger");
-    const nav = document.querySelector(".nav");
-
-    hamburger.addEventListener("click", () => nav.classList.toggle("active"));
-
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        var returnButton = document.querySelector(".return");
-        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 170) {
-            returnButton.classList.add("show"); // Mostra o botão
+        if (select.value === "Outra") {
+            input.style.display = "block"; // Mostra o campo de texto
         } else {
-            returnButton.classList.remove("show"); // Esconde o botão
+            input.style.display = "none"; // Oculta o campo de texto
+            input.value = ""; // Limpa o campo se "Outra" não estiver selecionado
         }
     }
 });
