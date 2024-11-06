@@ -8,6 +8,8 @@
     font-family: 'SUSE', sans-serif;
 }
 
+
+
 h1 {
     color: #1A2D61;
     font-weight: bold;
@@ -61,6 +63,7 @@ a {
   }
   .logo {
     width: 30vw;
+    position: relative;
   }
   .logo img{
     width: 4.5rem;
@@ -264,6 +267,8 @@ footer img {
     font-size: 20px;
     padding:  5px 0;
 }
+
+
 
 /* Responsividade */
 @media (max-width: 1040px) {

@@ -44,4 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
             input.value = ""; // Limpa o campo se "Outra" não estiver selecionado
         }
     }
+
+    
 });
