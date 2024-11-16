@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() { 
+document.addEventListener('DOMContentLoaded', function() {
     // Lida com o envio do formulário de orçamento
     var form = document.getElementById('orcamentoForm');
     if (form) {

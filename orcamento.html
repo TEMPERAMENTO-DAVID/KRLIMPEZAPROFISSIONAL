@@ -8,20 +8,29 @@
     <link rel="stylesheet" href="styles-orcamento.css">
 </head>
 <body>
+
+    <!-- Banner de Natal -->
+<div class="christmas-banner">
+    🎄 Boas Festas! Que o espírito de Natal traga muita paz, alegria e saúde para você e sua família! 🎅
+</div>
+
     <header class="header">
         <nav class="nav">
-          <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo da Empresa"> KR LIMPEZA PROFISSIONAL</a>
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo da Empresa">
+            <span class="logo-text">KR LIMPEZA PROFISSIONAL</span>
+          </a>
           <button class="hamburger"></button>
           <ul class="nav-list">
             <li><a href="orcamento.html">Orçamento</a></li>
             <li><a href="produtos.html">Aluguel de máquinas</a></li>
-            <li><a href="https://krprodutosdelimpeza.hipershops.com.br/" target="_blank">Loja Virtual</a></li>
           </ul>
         </nav>
-    </header>
+      </header> 
+      
     
-    <div class="container">
-        <h1>AGENDE UMA AVALIAÇÃO</h1>
+      <div class="container">
+        <h1>SOLICITE UM ORÇAMENTO</h1>
         <form id="orcamentoForm">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" placeholder="Seu nome" required>
@@ -33,7 +42,7 @@
             <input type="text" id="telefone" placeholder="Seu telefone" required>
     
             <label for="cidade">Cidade:</label>
-            <select id="cidade" required onchange="mostrarCampoOutro()">
+            <select id="cidade" required>
                 <option value="">Selecione sua cidade</option>
                 <option value="Itatiba">Itatiba</option>
                 <option value="Bragança Paulista">Bragança Paulista</option>
@@ -43,12 +52,7 @@
                 <option value="Jarinu">Jarinu</option>
                 <option value="Valinhos">Valinhos</option>
                 <option value="Vinhedo">Vinhedo</option>
-                <option value="São Paulo">São Paulo</option>
-                <option value="Amparo">Amparo</option>
-                <option value="Outra">Outra (especificar manualmente)</option>
             </select>
-
-            <input type="text" id="outraCidade" placeholder="Digite o nome da cidade" style="display:none; margin-top:10px;" />
     
             <label for="mensagem">Descrição do Serviço:</label>
             <textarea id="mensagem" placeholder="Descreva o serviço que você precisa" rows="4" required></textarea>
@@ -71,5 +75,6 @@
     </footer>
     
     <script src="scripts.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8e373b7eb941621e","version":"2024.10.5","r":1,"token":"cf8bfe3b6d0048df8911ba1a0cf463eb","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
 </body>
 </html>
