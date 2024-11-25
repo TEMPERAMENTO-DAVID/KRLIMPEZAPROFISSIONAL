@@ -171,7 +171,7 @@ a {
   }
 
 .nav img {
-    position: absolute;
+    position: relative;
 }
 
 h1 {

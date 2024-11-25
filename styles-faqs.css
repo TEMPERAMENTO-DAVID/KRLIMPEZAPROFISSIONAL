@@ -82,10 +82,14 @@ h1 {
 h2 {
     font-size: 1em;
     max-width: 150px;
+    
+    white-space: nowrap; /* Impede a quebra de linha */
+    width: auto; /* Remove possíveis restrições de largura */
 }
 
 p {
-    font-size: .8em;
+    font-size: 1.2em;
+    
 }
 
 a {
@@ -171,12 +175,12 @@ a {
   }
 
 .nav img {
-    position: absolute;
+    position: relative;
 }
 
 .perguntas {
     position: relative;
-    width: 500px;
+    width: 600px;
     height: 350px;
     margin: 0 auto;
     display: flex;
@@ -190,13 +194,13 @@ a {
   }
   
   #faq {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
   }
   
   .faq-item {
     background: white;
-    padding: 20px;
+    padding: 40px;
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);

@@ -149,7 +149,7 @@ a {
 }
 
 .nav img {
-    position: absolute;
+    position: relative;
 }
 
 .banner {
@@ -321,6 +321,7 @@ footer img {
 
 /* Responsividade */
 @media (max-width: 1140px) {
+    .active {background-color: #1A2D61;}
     .hamburger {
         display: block;
         z-index: 2;
