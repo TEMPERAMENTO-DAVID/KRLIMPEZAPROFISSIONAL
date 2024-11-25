@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { 
     // Lida com o envio do formulário de orçamento
     var form = document.getElementById('orcamentoForm');
     if (form) {
@@ -6,22 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault(); // Impede o envio do formulário padrão
 
             // Captura os valores do formulário
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const telefone = document.getElementById('telefone').value;
-            const cidade = document.getElementById('cidade').value;
-            const mensagem = document.getElementById('mensagem').value;
+            const nome = document.getElementById('nome')?.value || "";
+            const email = document.getElementById('email')?.value || "";
+            const telefone = document.getElementById('telefone')?.value || "";
+            const cidade = document.getElementById('cidade')?.value || "";
+            const mensagem = document.getElementById('mensagem')?.value || "";
 
             // Formata a mensagem para o WhatsApp
             const textoMensagem = `Olá, meu nome é *${nome}* ,\n\n*Vim pelo Site!* \n\nMeu e-mail é *${email}*,\n\nMeu telefone é *${telefone}*,\n\nEu moro em *${cidade}*.\n\nPreciso de um orçamento para o seguinte serviço:\n\n\n${mensagem}`;
-
-            // Codifica a mensagem para uso na URL
             const textoCodificado = encodeURIComponent(textoMensagem);
 
-            // Número de WhatsApp de destino (inclua o código do país)
+            // Número de WhatsApp de destino
             const numeroWhatsApp = '5511978745070';
-
-            // Cria o link de WhatsApp
             const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`;
 
             // Redireciona o usuário para o WhatsApp
@@ -29,15 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Lida com a mudança de seleção (se aplicável)
+    // Lida com a mudança de seleção
     function handleSelectChange(event) {
         const url = event.target.value;
         if (url) {
             if (url.startsWith('http')) {
-                // Se o link for externo, abre em nova aba
                 window.open(url, '_blank');
             } else {
-                // Se for um link interno, navega na mesma aba
                 window.location.href = url;
             }
         }
@@ -47,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showLightbox(lightboxId) {
         var lightbox = document.getElementById(lightboxId);
         if (lightbox) {
-            lightbox.classList.add('visible'); // Adiciona classe para mostrar o lightbox
+            lightbox.classList.add('visible');
         }
     }
 
@@ -55,30 +49,27 @@ document.addEventListener('DOMContentLoaded', function() {
     function hideLightbox() {
         var lightboxes = document.querySelectorAll('.lightbox.visible');
         lightboxes.forEach(function(lightbox) {
-            lightbox.classList.remove('visible'); // Remove classe para esconder o lightbox
+            lightbox.classList.remove('visible');
         });
     }
 
-    // Adiciona eventos de clique para mostrar o lightbox
     var serviceLinks = document.querySelectorAll('.service-item a');
     serviceLinks.forEach(function(link) {
         link.addEventListener('click', function(e) {
-            e.preventDefault(); // Impede o comportamento padrão do link
+            e.preventDefault();
             var targetId = link.getAttribute('href').substring(1);
             showLightbox(targetId);
         });
     });
 
-    // Adiciona eventos de clique para fechar o lightbox
     var closeButtons = document.querySelectorAll('.lightbox-close');
     closeButtons.forEach(function(closeBtn) {
         closeBtn.addEventListener('click', function(e) {
-            e.preventDefault(); // Impede o comportamento padrão do link
+            e.preventDefault();
             hideLightbox();
         });
     });
 
-    // Fecha o lightbox ao clicar fora da imagem
     var lightboxes = document.querySelectorAll('.lightbox');
     lightboxes.forEach(function(lightbox) {
         lightbox.addEventListener('click', function(e) {
@@ -91,16 +82,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector(".hamburger");
     const nav = document.querySelector(".nav");
 
-    hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+    if (hamburger && nav) {
+        hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+    } else {
+        console.warn("Botão '.hamburger' ou '.nav' não encontrados.");
+    }
 
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function() { scrollFunction(); };
 
     function scrollFunction() {
         var returnButton = document.querySelector(".return");
-        if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 170) {
-            returnButton.classList.add("show"); // Mostra o botão
+        if (returnButton) {
+            if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 170) {
+                returnButton.classList.add("show");
+            } else {
+                returnButton.classList.remove("show");
+            }
         } else {
-            returnButton.classList.remove("show"); // Esconde o botão
+            console.warn("O elemento '.return' não foi encontrado no DOM.");
         }
     }
 });
