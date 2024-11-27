@@ -88,8 +88,12 @@ document.addEventListener('DOMContentLoaded', function() {
         console.warn("Botão '.hamburger' ou '.nav' não encontrados.");
     }
 
-    window.onscroll = function() { scrollFunction(); };
+    window.onscroll = function() { 
+        scrollFunction();
+        handleScroll(); // Função para o menu hambúrguer
+    };
 
+    // Função para mostrar o botão de retorno
     function scrollFunction() {
         var returnButton = document.querySelector(".return");
         if (returnButton) {
@@ -100,6 +104,23 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } else {
             console.warn("O elemento '.return' não foi encontrado no DOM.");
+        }
+    }
+
+    // Função para ajustar a posição do menu hambúrguer após 100vh
+    function handleScroll() {
+        if (window.scrollY >= window.innerHeight) { // Verifica se rolou mais de 100vh
+            if (hamburger) {
+                hamburger.style.position = 'fixed';
+                hamburger.style.bottom = '15px';
+                hamburger.style.right = '15px';
+            }
+        } else {
+            if (hamburger) {
+                hamburger.style.position = ''; // Reseta a posição
+                hamburger.style.bottom = '';
+                hamburger.style.right = '';
+            }
         }
     }
 });

@@ -602,7 +602,6 @@ footer img {
         align-items: center;
         justify-content: center;
         z-index: 1;
-        position: fixed;
         width: 100%;
         background-color: #f8f9fa;
         box-shadow: 0 4px 2px -2px gray;
@@ -613,7 +612,7 @@ footer img {
         display: flex;
         flex-direction: column;
         height: 200px;
-        align-items: first baseline;
+        align-items: baseline;
     }
 
     .cima {
@@ -684,14 +683,6 @@ footer img {
 
 @media (max-width: 450px) {
   
-    .banner, section {
-        background-image: url('img/banner.png');
-        background-size: 200%;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        height: 100vh;
-    }
-
     .services {
         display: flex;
         flex-direction: column;
