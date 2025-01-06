@@ -14,6 +14,16 @@
 body {
     background-color: #f8f9fa;
 }
+
+.btn-zap a{
+    background-image: url(img/zap.png);
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    bottom: 45px;
+    right: 15px;
+}
+
 .cima {
     
     display: flex;
@@ -21,23 +31,12 @@ body {
 }
 
 
-.faqs {
+.faqs a{
     cursor: pointer;
     transition: all 0.3s ease;
+    color: #000000;
 }
 
-/* Estilo para o item quando clicado (ainda no estado ativo) */
-.faqs:active {
-    color: inherit; /* ou qualquer estilo para o clique */
-    background-color: transparent; /* ou qualquer estilo */
-}
-
-/* Remover cor de destaque quando o item estiver em foco (após o clique) */
-.faqs:focus {
-    outline: none; /* Remove a borda de foco se não quiser */
-    background-color: transparent; /* Mantém o fundo transparente */
-    color: inherit; /* Mantém a cor original */
-}
 
 .cabeçalho {
     display: flex;
@@ -156,6 +155,7 @@ a {
 
 .active {
     background-color: rgb(239, 200, 29);
+    border-radius: 7%;
 }
 
 .nav img {
@@ -192,15 +192,106 @@ a {
     position: relative;
     transition: 1.5s;
   }
+
+
+
+
+
+
+
+
+
+
+  
+  /* Hero Section */
+  
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: url("img/hero-bg.jpg") no-repeat center/cover;
+    color: #1A2D61;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.hero .btn {
+    background: #1A2D61;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.hero .btn:hover {
+    background: #ddd;
+    color: #1A2D61;
+}
+
+/* Seção Por que Escolher */
+.porque-escolher {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+    background: #fff;
+    text-align: center;
+    margin: 20px;
+}
+.porque-escolher h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.porque-escolher ul {
+    list-style: none;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.porque-escolher li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Nossos Serviços */
+.nossos-servicos {
+    background: #f4f4f4;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+.nossos-servicos h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.servico {
+    background: #fff;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+.servico h3 {
+    margin-bottom: 0.5rem;
+}
+.servico p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
   .container {
     margin: 30px 0;
   }
 
-  h1 {
-    font-size: 3rem;
-    color: #333;
-    margin: 150px 0;
-  }
 
   h2 {
     font-size: 2rem;
@@ -215,7 +306,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 150px 0;
+    margin: 10px 0;
   }
 
   .sobre img {
@@ -242,7 +333,6 @@ a {
     color: #fff;
     width: 90%;
     max-width: 650px;
-    margin: 20px auto;
     height: 433px;
   }
 
@@ -304,6 +394,7 @@ footer img {
     .hamburger {
         display: block;
         z-index: 2;
+        filter: drop-shadow(1px 1px 1px #000000);
       }
   
       .nav-list {
